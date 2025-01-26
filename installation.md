@@ -13,7 +13,9 @@ gitpod ALL=(postgres) NOPASSWD: /usr/bin/psql
 exit
 sudo -u postgres psql
 
-################# SQL Commands #############
+# SQL Commands #
+CREATE DATABASE chinook;
+\l 
 \c chinook
 \i Chinook_PostgreSql.sql
 SELECT * FROM "Artist";
