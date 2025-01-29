@@ -12,6 +12,9 @@ gitpod ALL=(postgres) NOPASSWD: /usr/bin/psql
 (Ctrl + X, then Y to confirm, and Enter)
 exit
 sudo -u postgres psql
+# if the code doesnt run because the role gitpod doesnt exist #
+CREATE ROLE gitpod WITH LOGIN PASSWORD 'yourpassword';
+ALTER ROLE gitpod CREATEDB;
 
 # SQL Commands #
 CREATE DATABASE chinook;
